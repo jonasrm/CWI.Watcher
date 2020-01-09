@@ -36,15 +36,12 @@ sua capacidade analítica, boas práticas de engenharia de software, performance
 escalabilidade da solução.
 
 
-
 ### Descrição
 Criar um sistema de análise de dados de venda que irá importar lotes de arquivos e produzir
 um relatório baseado em informações presentes no mesmo.
 Existem 3 tipos de dados dentro dos arquivos e eles podem ser distinguidos pelo seu
 identificador que estará presente na primeira coluna de cada linha, onde o separador de
 colunas é o caractere **“ç”**.
-
-
 
 
 **Dados do vendedor**
@@ -55,8 +52,6 @@ Os dados do vendedor possuem o identificador **001** e seguem o seguinte formato
 ```
 
 
-
-
 **Dados do cliente**
 
 Os dados do cliente possuem o identificador **002** e seguem o seguinte formato:
@@ -65,16 +60,12 @@ Os dados do cliente possuem o identificador **002** e seguem o seguinte formato:
 ```
 
 
-
-
 **Dados de venda**
 
 Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 ```sh
 003çSale IDç[Item ID-Item Quantity-Item Price]çSalesman name
 ```
-
-
 
 
 **Exemplo de conteúdo total do arquivo:**
@@ -98,8 +89,6 @@ No arquivo de saída o sistema deverá possuir os seguintes dados:
 - O pior vendedor
 
 
-
-
 ### Requisitos técnicos
 
 - O sistema deve rodar continuamente e capturar novos arquivos assim que eles sejam
@@ -108,15 +97,10 @@ inseridos no diretório padrão.
 necessário.
 
 
-
-
-
 ## Sobre a Aplicação
 - Foi desenvolvida em C# .Net Core 3.0 para plataforma Windows.
 - Para facilitar o desenvolvimento, execução, testes e avaliação foi implementado um "Console Application" que é executado de tempos em tempos.
 - Entendo que a solução final tem características de serviço agendado, por exemplo um Windows Service.
-
-
 
 
 ### Execução
@@ -125,16 +109,12 @@ necessário.
 - A periodicidade é um fator crucial que afeta a concepção de lotes e performance, deve ser avaliada de acordo com a necessidade e criticidade do processo.
 
 
-
-
 ## Indefinições da Especificação
-- Qual o tratamento caso existam subdiretórios dentro da pasta de entrada.
-- Um mesmo arquivo deve ser processado novamente - poderia ser implementado um controle com hash para evitar que um arquivo com o mesmo conteúdo seja processado mais de uma vez.
-- Qual o tipo de arquivo, portanto foi apenas considerados arquivos de texto puro com variações de extensões parametrizadas.
-- A relação entre as entidades está implicita, porém não existe ação mapeada entidades sem suas respectivas correspondentes - por exemplo, a entidade venda sem a entidade vendedor.
-- Necessidade de validar os dados como por exemplo CPF e CNPJ.
-
-
+- Qual o tratamento para subdiretórios dentro da pasta de entrada (a aplicação foi implementada considerando subdiretórios).
+- Um mesmo arquivo pode ser processado mais de uma vez - poderia ser implementado um controle com hash para evitar que um arquivo com o mesmo conteúdo seja processado mais de uma vez.
+- Qual os tipos de arquivos suportados (a aplicação foi implementada considerando arquivo de texto puro com parametrização de extensões).
+- A relação entre as entidades está implicita, porém não existe ação definida para entidades sem suas respectivas correspondentes - por exemplo, a entidade venda sem a entidade vendedor.
+- Validação de dados, como por exemplo CPF e CNPJ.
 
 
 ## Melhorias Evolutivas
@@ -148,8 +128,4 @@ necessário.
 - Se necessário uma ação instantânea ao haver alteração no diretório poderia ser utilizado a função "FileSystemWatcher".
 - Refatorar possíveis gargalos, por exemplo substituir "List" por "Array".
 - Trtar melhor as ocorrências de falha, especificar qual arquivo deu erro, qual linha e qual o tipo de erro.
-
-
-
-
 
