@@ -25,13 +25,17 @@
 * [Indefinições da Especificação](#enunciado)
 * [Melhorias Evolutivas](#melhorias-evolutivas)
 
+
 ## Enunciado
+
 
 ### Objetivo da prova
 O objetivo da prova é testarmos suas habilidades em desenvolvimento de software. Iremos
 avaliar mais do que o funcionamento da solução proposta, avaliaremos a sua abordagem, a
 sua capacidade analítica, boas práticas de engenharia de software, performance e
 escalabilidade da solução.
+
+
 
 ### Descrição
 Criar um sistema de análise de dados de venda que irá importar lotes de arquivos e produzir
@@ -41,7 +45,9 @@ identificador que estará presente na primeira coluna de cada linha, onde o sepa
 colunas é o caractere **“ç”**.
 
 
+
 **Dados do vendedor**
+
 Os dados do vendedor possuem o identificador **001** e seguem o seguinte formato:
 ```sh
 001çCPFçNameçSalary
@@ -49,6 +55,7 @@ Os dados do vendedor possuem o identificador **001** e seguem o seguinte formato
 
 
 **Dados do cliente**
+
 Os dados do cliente possuem o identificador **002** e seguem o seguinte formato:
 ```sh
 002çCNPJçNameçBusiness Area
@@ -56,6 +63,7 @@ Os dados do cliente possuem o identificador **002** e seguem o seguinte formato:
 
 
 **Dados de venda**
+
 Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 ```sh
 003çSale IDç[Item ID-Item Quantity-Item Price]çSalesman name
@@ -63,6 +71,7 @@ Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 
 
 **Exemplo de conteúdo total do arquivo:**
+
 ```sh
 001ç1234567891234çPedroç50000
 001ç3245678865434çPauloç40000.99
