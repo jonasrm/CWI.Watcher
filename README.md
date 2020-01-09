@@ -22,7 +22,7 @@
 * [Enunciado](#enunciado)
 * [Sobre a aplicação](#sobre-a-aplicação)
   * [Execução](#execução)
-* [Indefinições da Especificação](#enunciado)
+* [Indefinições da Especificação](#indefinições-da-especificação)
 * [Melhorias Evolutivas](#melhorias-evolutivas)
 
 
