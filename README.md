@@ -46,12 +46,15 @@ colunas é o caractere **“ç”**.
 
 
 
+
 **Dados do vendedor**
 
 Os dados do vendedor possuem o identificador **001** e seguem o seguinte formato:
 ```sh
 001çCPFçNameçSalary
 ```
+
+
 
 
 **Dados do cliente**
@@ -62,12 +65,16 @@ Os dados do cliente possuem o identificador **002** e seguem o seguinte formato:
 ```
 
 
+
+
 **Dados de venda**
 
 Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 ```sh
 003çSale IDç[Item ID-Item Quantity-Item Price]çSalesman name
 ```
+
+
 
 
 **Exemplo de conteúdo total do arquivo:**
@@ -81,6 +88,7 @@ Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
 ```
 
+
 O sistema deverá ler continuamente todos os arquivos dentro do diretório padrão
 HOMEPATH/data/in e colocar o arquivo de saída em HOMEPATH/data/out.
 No arquivo de saída o sistema deverá possuir os seguintes dados:
@@ -89,18 +97,61 @@ No arquivo de saída o sistema deverá possuir os seguintes dados:
 • ID da venda mais cara
 • O pior vendedor
 
+
+
+
+
 ### Requisitos técnicos
+
 • O sistema deve rodar continuamente e capturar novos arquivos assim que eles sejam
 inseridos no diretório padrão.
+
 • Você tem total liberdade para escolher qualquer biblioteca externa se achar
 necessário.
 
-## Sobra a Aplicação
+
+
+
+
+## Sobre a Aplicação
+- Foi desenvolvida em C# .Net Core 3.0 para plataforma Windows.
+- Para facilitar o desenvolvimento, execução, testes e avaliação foi implementado um "Console Application" que é executado de tempos em tempos.
+- Entendo que a solução final tem características de serviço agendado, por exemplo um Windows Service.
+
+
+
 
 ### Execução
+- Para executar basta executar `CWI.Watcher.exe (milissegundos)` - onde milissegundos é a periodicidade de execução - por exemplo `CWI.Watcher.exe 15000` executa o programa a cada 15 segundos.
+- Em modo "Debug" a aplicação é executada a cada 10 segundos.
+- A periodicidade é um fator crucial que afeta a concepção de lotes e performance, deve ser avaliada de acordo com a necessidade e criticidade do processo.
+
+
+
 
 ## Indefinições da Especificação
+- Qual o tratamento caso existam subdiretórios dentro da pasta de entrada.
+- Um mesmo arquivo deve ser processado novamente - poderia ser implementado um controle com hash para evitar que um arquivo com o mesmo conteúdo seja processado mais de uma vez.
+- Qual o tipo de arquivo, portanto foi apenas considerados arquivos de texto puro com variações de extensões parametrizadas.
+- A relação entre as entidades está implicita, porém não existe ação mapeada entidades sem suas respectivas correspondentes - por exemplo, a entidade venda sem a entidade vendedor.
+- Necessidade de validar os dados como por exemplo CPF e CNPJ.
+
+
+
 
 ## Melhorias Evolutivas
+- Alterar o delimitar "ç" para outro, por exemplo ";".
+- Implementar testes unitários.
+- Implementar injeção de dependência.
+- Agregar um repositório para armazenar logs, configurações e controles.
+- Mecanismo de aviso de falhas, por exemplo envio de e-mail.
+- Utilização de threads para processamento paralelo.
+- Implementar specification para validações.
+- Se necessário uma ação instantânea ao haver alteração no diretório poderia ser utilizado a função "FileSystemWatcher".
+- Refatorar possíveis gargalos, por exemplo substituir "List" por "Array".
+- Trtar melhor as ocorrências de falha, especificar qual arquivo deu erro, qual linha e qual o tipo de erro.
+
+
+
 
 
