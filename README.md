@@ -92,21 +92,19 @@ Os dados de venda possuem o identificador **003** e seguem o seguinte formato:
 O sistema deverá ler continuamente todos os arquivos dentro do diretório padrão
 HOMEPATH/data/in e colocar o arquivo de saída em HOMEPATH/data/out.
 No arquivo de saída o sistema deverá possuir os seguintes dados:
-• Quantidade de clientes no arquivo de entrada
-• Quantidade de vendedores no arquivo de entrada
-• ID da venda mais cara
-• O pior vendedor
-
+- Quantidade de clientes no arquivo de entrada
+- Quantidade de vendedores no arquivo de entrada
+- ID da venda mais cara
+- O pior vendedor
 
 
 
 
 ### Requisitos técnicos
 
-• O sistema deve rodar continuamente e capturar novos arquivos assim que eles sejam
+- O sistema deve rodar continuamente e capturar novos arquivos assim que eles sejam
 inseridos no diretório padrão.
-
-• Você tem total liberdade para escolher qualquer biblioteca externa se achar
+- Você tem total liberdade para escolher qualquer biblioteca externa se achar
 necessário.
 
 
