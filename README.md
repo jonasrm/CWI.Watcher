@@ -98,14 +98,14 @@ necessário.
 
 
 ## Sobre a Aplicação
-- Foi desenvolvida em C# .Net Core 3.0 para plataforma Windows.
+- Foi desenvolvida em **C# .Net Core 3.0** para plataforma Windows.
 - Para facilitar o desenvolvimento, execução, testes e avaliação foi implementado um "Console Application" que é executado de tempos em tempos.
 - Entendo que a solução final tem características de serviço agendado, por exemplo um Windows Service.
 
 
 ### Execução
 - Para executar basta executar `CWI.Watcher.exe (milissegundos)` - onde milissegundos é a periodicidade de execução - por exemplo `CWI.Watcher.exe 15000` executa o programa a cada 15 segundos.
-- Em modo "Debug" a aplicação é executada a cada 10 segundos.
+- Em modo **"Debug"** a aplicação é executada a cada 10 segundos.
 - A periodicidade é um fator crucial que afeta a concepção de lotes e performance, deve ser avaliada de acordo com a necessidade e criticidade do processo.
 
 
@@ -118,14 +118,14 @@ necessário.
 
 
 ## Melhorias Evolutivas
-- Alterar o delimitar "ç" para outro, por exemplo ";".
+- Alterar o delimitar **"ç**" para outro, por exemplo **";"**.
 - Implementar testes unitários.
 - Implementar injeção de dependência.
 - Agregar um repositório para armazenar logs, configurações e controles.
 - Mecanismo de aviso de falhas, por exemplo envio de e-mail.
 - Utilização de threads para processamento paralelo.
 - Implementar specification para validações.
-- Se necessário uma ação instantânea ao haver alteração no diretório poderia ser utilizado a função "FileSystemWatcher".
-- Refatorar possíveis gargalos, por exemplo substituir "List" por "Array".
+- Se necessário uma ação instantânea ao haver alteração no diretório poderia ser utilizado a função **"FileSystemWatcher"**.
+- Refatorar possíveis gargalos, por exemplo substituir **"List"** por **"Array"**.
 - Trtar melhor as ocorrências de falha, especificar qual arquivo deu erro, qual linha e qual o tipo de erro.
 
