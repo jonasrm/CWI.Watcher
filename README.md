@@ -103,7 +103,7 @@ necessário.
 - Entendo que a solução final tem características de serviço agendado, por exemplo um Windows Service.
 - Diretório de entrada: `C:\Users\<usuario>\data\in`
 - Diretório de saída: `C:\Users\<usuario>\data\out`
-- Diretório temporário: `C:\Users\<usuario>\data\tempo`
+- Diretório temporário: `C:\Users\<usuario>\data\temp`
 - Diretório de erros: `C:\Users\<usuario>\data\out\error` 
 
 
@@ -119,6 +119,7 @@ necessário.
 - Qual os tipos de arquivos suportados (a aplicação foi implementada considerando arquivo de texto puro com parametrização de extensões).
 - A relação entre as entidades está implicita, porém não existe ação definida para entidades sem suas respectivas correspondentes - por exemplo, a entidade venda sem a entidade vendedor.
 - Validação de dados, como por exemplo CPF e CNPJ.
+- Tratamento para arquivos com o mesmo nome (a aplicação foi implementada sobrescrevendo caso o arquivo já exista).
 
 
 ## Melhorias Evolutivas
