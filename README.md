@@ -101,6 +101,10 @@ necessário.
 - Foi desenvolvida em **C# .Net Core 3.0** para plataforma Windows.
 - Para facilitar o desenvolvimento, execução, testes e avaliação foi implementado um "Console Application" que é executado de tempos em tempos.
 - Entendo que a solução final tem características de serviço agendado, por exemplo um Windows Service.
+- Diretório de entrada: `C:\Users\<usuario>\data\in`
+- Diretório de saída: `C:\Users\<usuario>\data\out`
+- Diretório temporário: `C:\Users\<usuario>\data\tempo`
+- Diretório de erros: `C:\Users\<usuario>\data\out\error` 
 
 
 ### Execução
